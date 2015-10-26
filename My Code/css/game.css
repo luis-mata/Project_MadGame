@@ -21,3 +21,6 @@
   max-height: 450px;
   position: relative;
 }
+.lost .player {
+  background: rgb(160, 64, 64);
+}
