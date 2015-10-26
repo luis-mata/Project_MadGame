@@ -4,7 +4,8 @@ var actorChars = {
   "o": Coin, // A coin will wobble up and down
   "=": Lava, "|": Lava, "v": Lava,
   "d": Death,
-  "e": Enemy, "p": Enemy, "w": Enemy //different types of enemies
+  "e": Enemy, "p": Enemy, "w": Enemy, //different types of enemies
+  //"y": Move, "u": Move, "z": Move //moving platforms 
 };
 
 function Level(plan) {
@@ -123,6 +124,21 @@ function Enemy(pos, ch) {
   }
 }
 Enemy.prototype.type = "enemy";
+
+
+/*function Move(pos, ch) {
+  this.pos = pos;
+  this.size = new Vector(1, 1);
+  if (ch == "y") {
+    this.speed = new Vector(5, 0);
+  } else if (ch == "u") {
+    this.speed = new Vector(0, 5);
+  } else if (ch == "z") {
+    this.speed = new Vector(0, 3);
+    this.repeatPos = pos;
+  }
+}
+Move.prototype.type = "move";*/
 
 function Death(pos) {
    this.basePos = this.pos = pos.plus(new Vector(0.2, 0.1));
@@ -318,6 +334,16 @@ Enemy.prototype.act = function(step, level) {
   else
     this.speed = this.speed.times(-1);
 };
+
+/*Move.prototype.act = function(step, level) {
+  var newPos = this.pos.plus(this.speed.times(step));
+  if (!level.obstacleAt(newPos, this.size))
+    this.pos = newPos;
+  else if (this.repeatPos)
+    this.pos = this.repeatPos;
+  else
+    this.speed = this.speed.times(-1);
+};*/
 
 var maxStep = 0.05;
 
