@@ -114,9 +114,9 @@ function Enemy(pos, ch) {
   this.pos = pos;
   this.size = new Vector(1, 1);
   if (ch == "e") {
-    this.speed = new Vector(2, 0);
+    this.speed = new Vector(25, 0);
   } else if (ch == "p") {
-    this.speed = new Vector(0, 2);
+    this.speed = new Vector(0, 20);
   } else if (ch == "w") {
     this.speed = new Vector(0, 3);
     this.repeatPos = pos;
