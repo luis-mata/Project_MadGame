@@ -24,3 +24,7 @@
 .lost .player {
   background: rgb(160, 64, 64);
 }
+.won .player {
+		background-image:("http://yesiamcheap.com/wordpress/wp-content/uploads/2012/12/youwon1.gif");
+		background-position: center;
+}
