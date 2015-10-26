@@ -11,7 +11,7 @@
 .actor  { position: absolute;  }
 .death { background-image: url("http://img05.deviantart.net/1464/i/2011/312/f/6/neon_green_powder_texture_i_by_melyssah6_stock-d4fiemj.jpg") }
 .coin   { background-image: url("http://orig03.deviantart.net/dab6/f/2007/241/a/2/golden_texture_by_japanstocks.jpg"); }
-.player { background: rgb(255,69,0); }
+.player { background: white; }
 .enemy { background-image: url("http://www.goodwp.com/images/201306/goodwp.com_29195.jpg") }
 
 
